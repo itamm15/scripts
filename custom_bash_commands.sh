@@ -27,3 +27,8 @@ function create_user(){
     echo "Failed."
   fi
 }
+
+function count_lines_from_git(){
+# If you want to use that function, just change the author with yours nick
+git log --author="itamm15" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+}
