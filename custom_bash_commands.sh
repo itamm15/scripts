@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# SFML code runner
+function run_sfml(){
+  g++ $1 -I/opt/homebrew/Cellar/sfml/2.5.1_2/include/ -L/opt/homebrew/Cellar/sfml/2.5.1_2/lib/ -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+}
+
 function mix_all(){
   echo "mix format"
   mix format
